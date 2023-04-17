@@ -82,7 +82,7 @@ public class SampleController implements Initializable{
     private double []temp = {1.0, 1.8};
     
     @Override
-    public void initialize(URL location, ResourceBundle resources)
+    public void initialize(URL location, ResourceBundle resources) // mettre la bonne liste pour chaque combo box
     {
     cmbmass.setItems(listmass);
     cmbmass2.setItems(listmass);
@@ -93,7 +93,7 @@ public class SampleController implements Initializable{
     }
     
     @FXML
-    private void verifNum(KeyEvent e)
+    private void verifNum(KeyEvent e) // assurer que les entrées sont tous numériques
     {
     TextField txt=(TextField)e.getSource();
 
@@ -108,7 +108,7 @@ public class SampleController implements Initializable{
     });
     }
    
-    private double converttemp(ComboBox<String> a, ComboBox<String> b, TextField c, TextField d, double tbl[])
+    private double converttemp(ComboBox<String> a, ComboBox<String> b, TextField c, TextField d, double tbl[]) //calcul pour la proportion pour la température
     {
     	double from=setRate(a,tbl);
     	double to=setRate(b,tbl);
@@ -116,10 +116,10 @@ public class SampleController implements Initializable{
     	return dest; 
     }
      
-    
+  //codes pour convertir la température 
     
     @FXML
-    private void convertTemp()
+    private void convertTemp() 
     {
     	double start=Double.parseDouble(txttemp.getText());;
     	double a=converttemp(cmbtemp, cmbtemp2, txttemp, txttemp2, temp);
@@ -165,7 +165,7 @@ public class SampleController implements Initializable{
     
     }
     
-    
+    //mettre la valeur des listes 
     private double setRate(ComboBox<String> a, double tbl[])
     {
     	int item=a.getSelectionModel().getSelectedIndex();
@@ -173,6 +173,7 @@ public class SampleController implements Initializable{
     	return val;
     }
     
+    //méthode générale pour convertir les unités
     private void convert(ComboBox<String> a, ComboBox<String> b, TextField c, TextField d, double tbl[])
     {
     	double from=setRate(a,tbl);
@@ -188,7 +189,7 @@ public class SampleController implements Initializable{
     	double dest=(to/from)*start;
     	d.setText(String.valueOf(dest)); 
     }
-    
+    //code pour convertir la masse
     @FXML
     private void convertmass1()
     {
@@ -201,6 +202,7 @@ public class SampleController implements Initializable{
     	convert(cmbmass2, cmbmass, txtmass2, txtmass, mass);
     }
     
+    //code pour convertir le volume
     @FXML
     private void convertvol()
     {
@@ -213,6 +215,7 @@ public class SampleController implements Initializable{
     	convert(cmbvol2, cmbvol, txtvol2, txtvol, vol);
     }
     
+    //bouton pour quitter l'application
     @FXML
     void quitter()
     {
