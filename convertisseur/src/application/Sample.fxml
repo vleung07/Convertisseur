@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Pane layoutX="2.0" layoutY="-1.0" prefHeight="425.0" prefWidth="600.0">
+         <children>
+            <TabPane layoutX="-1.0" prefHeight="425.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Température">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txttemp" layoutX="59.0" layoutY="159.0" onKeyReleased="#convertTemp" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbtemp" layoutX="65.0" layoutY="209.0" prefWidth="150.0" />
+                              <Text layoutX="276.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+                              <TextField fx:id="txttemp2" layoutX="342.0" layoutY="159.0" onKeyReleased="#convertTemp2" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbtemp2" layoutX="348.0" layoutY="209.0" prefWidth="150.0" />
+                              <Button fx:id="quit3" layoutX="531.0" layoutY="351.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Masse">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtmass" layoutX="59.0" layoutY="159.0" onKeyReleased="#convertmass1" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbmass" layoutX="65.0" layoutY="209.0" prefWidth="150.0" />
+                              <Text layoutX="276.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+                              <TextField fx:id="txtmass2" layoutX="342.0" layoutY="159.0" onKeyReleased="#convertmass2" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbmass2" layoutX="348.0" layoutY="209.0" prefWidth="150.0" />
+                              <Button fx:id="quit2" layoutX="531.0" layoutY="351.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Volume">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtvol" layoutX="59.0" layoutY="159.0" onKeyReleased="#convertvol" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbvol" layoutX="65.0" layoutY="209.0" prefWidth="150.0" />
+                              <Text layoutX="276.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+                              <TextField fx:id="txtvol2" layoutX="342.0" layoutY="159.0" onKeyReleased="#convertvol2" onKeyTyped="#verifNum" />
+                              <ComboBox fx:id="cmbvol2" layoutX="348.0" layoutY="209.0" prefWidth="150.0" />
+                              <Button fx:id="quit" layoutX="531.0" layoutY="351.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
